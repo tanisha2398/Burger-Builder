@@ -1,5 +1,5 @@
 import React from "react";
-import Aux from "../../hoc/Aux";
+import Aux from "../../higherOrderComponent/Auxilary";
 const layout = props => (
   <Aux>
     <div>toolbar sidedrawer backdrop</div>
