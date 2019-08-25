@@ -6,7 +6,7 @@ const navigationItems = () => (
     <NavigationItem link="/" active>
       Burger Builder
     </NavigationItem>
-    <NavigationItem link="/c">CheckOut</NavigationItem>
+    <NavigationItem link="/">CheckOut</NavigationItem>
   </ul>
 );
 export default navigationItems;
