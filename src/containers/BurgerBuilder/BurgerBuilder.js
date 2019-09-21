@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Burger from "../../components/Burger/Burger";
-import * as actionTypes from "../../store/action";
+import * as burgerBilderActions from "../../store/actions/index";
 import Aux from "../../higherOrderComponent/Auxilary/Auxilary";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Modal from "../../components/UI/Modal/Modal";
@@ -130,12 +130,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     onIngredientAdded: ingName =>
-      dispatch({ type: actionTypes.ADD_INGREDIENTS, ingredientName: ingName }),
+      dispatch(burgerBilderActions.addIngredient(ingName)),
     onIngredientRemoved: ingName =>
-      dispatch({
-        type: actionTypes.REMOVE_INGREDIENTS,
-        ingredientName: ingName
-      })
+      dispatch(burgerBilderActions.removeIngredient(ingName))
   };
 };
 export default connect(
