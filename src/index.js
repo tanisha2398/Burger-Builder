@@ -7,7 +7,8 @@ import { createStore } from "redux";
 import reducer from "./store/reducer";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-const store = createStore(reducer);
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 let jsx = (
   <Provider store={store}>
     <BrowserRouter>
