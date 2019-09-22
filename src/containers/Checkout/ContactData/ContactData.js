@@ -190,6 +190,9 @@ const mapStateToProps = state => {
   };
 };
 const mapDispatchToProps = dispatch => {
-  onOrderBurger: orderData => dispatch(actions.purchaseBurgerStart(orderData));
+  return{
+    onOrderBurger: orderData => dispatch(actions.purchaseBurger(orderData));
+  }
+ 
 };
-export default connect(mapStateToProps)(withErrorHandler(ContactData));
+export default connect(mapStateToProps,mapDispatchToProps)(withErrorHandler(ContactData));

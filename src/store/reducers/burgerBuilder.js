@@ -35,11 +35,10 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         ingredients: {
-          salad:action.ingredients.salad,
-          meat:action.ingredients.meat,
-          cheese:action.ingredients.cheese,
-          bacon:action.ingredients.bacon
-          
+          salad: action.ingredients.salad,
+          meat: action.ingredients.meat,
+          cheese: action.ingredients.cheese,
+          bacon: action.ingredients.bacon
         },
         error: false
       };
@@ -48,7 +47,8 @@ const reducer = (state = initialState, action) => {
         ...state,
         error: true
       };
+    default:
+      return state;
   }
-  return state;
 };
 export default reducer;
