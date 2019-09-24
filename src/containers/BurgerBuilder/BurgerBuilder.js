@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Burger from "../../components/Burger/Burger";
-import * as burgerBilderActions from "../../store/actions/index";
+import * as actions from "../../store/actions/index";
 import Aux from "../../higherOrderComponent/Auxilary/Auxilary";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Modal from "../../components/UI/Modal/Modal";
@@ -66,6 +66,7 @@ class BurgerBuilder extends Component {
     //   pathname: "/checkout",
     //   search: "?" + queryString
     // });
+    this.props.onInitPurchase();
     this.props.history.push("/checkout");
   };
   render() {
@@ -129,11 +130,10 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
   return {
-    onIngredientAdded: ingName =>
-      dispatch(burgerBilderActions.addIngredient(ingName)),
-    onIngredientRemoved: ingName =>
-      dispatch(burgerBilderActions.removeIngredient(ingName)),
-    onInitIngredients: () => dispatch(burgerBilderActions.initIngredients())
+    onIngredientAdded: ingName => dispatch(actions.addIngredient(ingName)),
+    onIngredientRemoved: ingName => dispatch(actions.removeIngredient(ingName)),
+    onInitIngredients: () => dispatch(actions.initIngredients()),
+    onInitPurchase: () => dispatch(actions.purchaseInit())
   };
 };
 export default connect(
