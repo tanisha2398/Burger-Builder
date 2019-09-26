@@ -9,7 +9,9 @@ class navigationItems extends Component {
         <NavigationItem link="/" exact>
           Burger Builder
         </NavigationItem>
-        <NavigationItem link="/orders">Orders</NavigationItem>
+        {this.props.isAuthenticated ? (
+          <NavigationItem link="/orders">Orders</NavigationItem>
+        ) : null}
         {!this.props.isAuthenticated ? (
           <NavigationItem link="/auth">Authenticate</NavigationItem>
         ) : (
