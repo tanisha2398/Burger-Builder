@@ -12,6 +12,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### Screenshot
+## Screenshot
 
-![Capture](https://user-images.githubusercontent.com/28656259/65766139-c248f680-e147-11e9-9cc0-bfeb5886b6ba.PNG)
+### BurgerBuilder
+![Screenshot (122)](https://user-images.githubusercontent.com/28656259/65767436-7d26c380-e14b-11e9-8e77-b4bab650cf5d.png)
+
+### Authentication Page
+![Screenshot (120)](https://user-images.githubusercontent.com/28656259/65766890-e0aff180-e149-11e9-9eb0-6928adb8bbfb.png)
+### Orders Page
+![Screenshot (121)](https://user-images.githubusercontent.com/28656259/65767023-43a18880-e14a-11e9-9d52-8dd631d70e7b.png)
