@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import Layout from "./higherOrderComponent/Layout/Layout";
 import BurgerBuilder from "../src/containers/BurgerBuilder/BurgerBuilder";
 import Checkout from "./containers/Checkout/Checkout";
@@ -35,7 +35,9 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(App);
+export default withRouter(
+  connect(
+    null,
+    mapDispatchToProps
+  )(App)
+);
